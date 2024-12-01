@@ -85,11 +85,9 @@ def cat(inp):
         return 'N'
     
 #Definindo função de execução do modelo
-def treino(inp):
-    mtx=[]
+def exec(inp):
     #String do output
     strOut=''
-    rgs=''
     for i in range(1,len(inp.split(' '))-1):
         #Definindo tensores
         if len(modelo.wv[inp.split(' ')])%i==0 and len(word_vectors)%i==0:#Vendo se 'i' se enquadra como dimensão do tensor
@@ -121,11 +119,11 @@ def treino(inp):
 
 #Input
 sttr=input('Sua frase:')
-print(treino(sttr.lower()))
+print(exec(sttr.lower()))
 
 @app.route('/')
 def index():
-    return render_template('menu.html')
+    return "<p>"+exec(sttr.lower())+"</p>"
 
 if __name__ == '__main__':
     app.run(debug=True)
