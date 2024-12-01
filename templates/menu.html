@@ -1,0 +1,238 @@
+<html>
+<head>
+    <title>Welcome!</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+    background-image: linear-gradient(90deg, gray,gray );         
+                color: #fff;
+      font-family: Lato;
+                            padding-top: 100px;
+                            font-weight: 200px;
+
+        background-size: cover; 
+
+            }
+
+        @media (max-width: 1767px) {
+        body {
+            background-color:black;         
+                color: #fff;
+      font-family: Lato;
+                            padding-top: 100px;
+                            font-weight: 200px;
+
+
+        background-size: 10000; 
+        }
+    }
+
+    aa{
+        position: relative;
+        display: inline-block;
+        padding: 25px 30px;
+        margin: 40px 0;
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        overflow: hidden;
+        margin-right: 50px;
+
+    }
+    aa:hover{
+        background:white;
+        color: #050801;
+        box-shadow: 0 0 5px gray,
+                    0 0 25px black,
+                    0 0 50px black,
+                    0 0 200px black;
+         -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+    aa:nth-child(1){
+        filter: hue-rotate(270deg);
+    }
+    aa:nth-child(2){
+        filter: hue-rotate(110deg);
+    }
+    aa span{
+        position: absolute;
+        display: block;
+    }
+    aa span:nth-child(1){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,#03e9f4);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1{
+        0%{
+            left: -100%;
+        }
+        50%,100%{
+            left: 100%;
+        }
+    }
+    aa span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,#03e9f4);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2{
+        0%{
+            top: -100%;
+        }
+        50%,100%{
+            top: 100%;
+        }
+    }
+    aa span:nth-child(3){
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,#03e9f4);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.50s;
+    }
+    @keyframes animate3{
+        0%{
+            right: -100%;
+        }
+        50%,100%{
+            right: 100%;
+        }
+    }
+
+
+    aa span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,#03e9f4);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom: -100%;
+        }
+        50%,100%{
+            bottom: 100%;
+        }
+    }
+
+    h5::before {  
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    h5:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    h5::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      inset: 0 0 0 0;
+      background: gray;
+      z-index: -1;
+      transition: transform .3s ease;
+    }
+
+    h5 {
+      position: relative;
+      text-align:left;
+      font-size:20px;
+    }
+
+
+    h3{
+
+    text-align:right;
+
+
+    }
+
+            h2 {
+                text-align: center;
+                font-size:15px;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 18px;
+            }
+
+            form {
+                text-align: center;
+
+            }
+
+            input[type="text"] {
+                width: 250px;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                margin: 10px;
+            }
+
+            input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+            input[type="file"] {
+                width: 250px;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                margin: 10px;
+            }
+        </style>
+</head>
+<body>
+
+<h1><aa>Welcome to Yumaru!</aa></h1>
+<br>
+
+<h1>
+<form method='POST' action="{{ url_for('src') }}">
+<br>
+<h1>Current text:{{ai}}</h1>
+<br>
+<h1>Enter a text:</h1>
+<h1><input type='file' accept="image" name='txtb'></h1>
+<h1><input type='submit' value='Send'></h1>
+    
+</form>
+    <br>
+</h1>
+
+    
+
+    
+</body>
+</html>

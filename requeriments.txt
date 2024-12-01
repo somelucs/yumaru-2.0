@@ -1,0 +1,14 @@
+nltk
+Flask
+Counter
+Random
+tqdm
+torch
+Adam
+pandas
+numpy
+tensorflow
+scikit-learn
+torchvision
+opencv-python 
+pytesseract
