@@ -4,14 +4,11 @@ from flask import Flask, render_template, request
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from sklearn.feature_extraction.text import CountVectorizer
 import nltk
 from gensim.models import Word2Vec
 import gensim
 from nltk.tokenize import sent_tokenize, word_tokenize
-import random
 from nltk.corpus import brown
-import math
 
 
 app = Flask(__name__)
